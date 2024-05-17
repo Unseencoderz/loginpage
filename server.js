@@ -1,17 +1,21 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const cors = require('cors'); // Import CORS middleware
+const cors = require('cors');
+const dotenv = require('dotenv');
+
+// Load environment variables from .env file
+dotenv.config();
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000; // Use PORT from environment variables or default to 3000
 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
 app.use(cors()); // Use CORS middleware to allow all origins during development
 
 // Connect to MongoDB Atlas
-mongoose.connect('mongodb+srv://sahilgautam0097:HHjSAiTuKGV92AsC@cluster0.omracpe.mongodb.net/gameDB', {
+mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
