@@ -16,8 +16,7 @@ app.use(cors()); // Use CORS middleware to allow all origins during development
 
 // Connect to MongoDB Atlas
 mongoose.connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+
 })
 .then(() => {
     console.log('Connected to MongoDB Atlas');
